@@ -20,4 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     prevArrow: `<button class=' slick-prev '><i class="bi bi-chevron-left"></i></button>`,
     nextArrow: `<button class=' slick-next '><i class="bi bi-chevron-right"></i></button>`,
   });
+  $(".dropdown-toggle").dropdown();
 });

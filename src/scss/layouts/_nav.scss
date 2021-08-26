@@ -14,4 +14,35 @@ nav.primary-nav {
       padding: 1em;
     }
   }
+  .dropdown-menu {
+    .dropend:hover,
+    .dropstart:hover {
+      .dropdown-toggle {
+        background-color: #e9ecef;
+      }
+      color: var(--black);
+      & > .submenu.dropdown-menu {
+        display: block;
+      }
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      left: calc(100% + 1px);
+      top: -1px;
+      height: 100%;
+    }
+    .dropstart {
+      .submenu {
+        left: auto;
+        right: calc(100% + 1px);
+      }
+    }
+    .dropdown,
+    .dropend,
+    .dropstart,
+    .dropup {
+      position: static;
+    }
+  }
 }

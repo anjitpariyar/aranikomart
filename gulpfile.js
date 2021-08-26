@@ -98,6 +98,13 @@ gulp.task("copy-images", function () {
   return gulp.src(["src/img/**/*.*"]).pipe(gulp.dest("dist/img"));
 });
 
+// Image system copy
+gulp.task("copy-js", function () {
+  return gulp
+    .src(["node_modules/bootstrap/dist/js/*"])
+    .pipe(gulp.dest("dist/bootstrap"));
+});
+
 // Font copy
 // Note that it is a relative path to the CSS directory
 gulp.task("copy-fonts", function () {
@@ -120,6 +127,7 @@ gulp.task(
     "sass",
     "webpack-local",
     "copy-images",
+    "copy-js",
     "copy-fonts",
     "copy-slick"
   ),
@@ -134,6 +142,7 @@ gulp.task(
     "sass",
     "webpack-dev",
     "copy-images",
+    "copy-js",
     "copy-fonts",
     "copy-slick"
   ),
@@ -148,6 +157,7 @@ gulp.task(
     "sass-production",
     "webpack-prod",
     "copy-images",
+    "copy-js",
     "copy-fonts",
     "copy-slick"
   ),
