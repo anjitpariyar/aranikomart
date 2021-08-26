@@ -1,0 +1,17 @@
+nav.primary-nav {
+  background-color: var(--white);
+  border: 1px solid var(--white--grey);
+  top: 0;
+  z-index: 999;
+  position: sticky;
+  border-left: 0;
+  border-right: 0;
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    .nav-link {
+      color: var(--black);
+      padding: 1em;
+    }
+  }
+}

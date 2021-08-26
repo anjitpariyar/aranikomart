@@ -1,0 +1,68 @@
+@mixin ul {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+@mixin image {
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@mixin transition {
+  transition: 0.3s linear;
+}
+@mixin transitionIn {
+  transition: 0.3s ease-in;
+}
+@mixin transitionOut {
+  transition: 0.3s ease-out;
+}
+
+@mixin flexer($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin border-radius {
+  border-radius: 8px;
+}
+@mixin card {
+  .card {
+    &,
+    a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .card__img {
+      @include image;
+      position: relative;
+      .tag {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+      }
+    }
+    .card__title {
+      font-size: 1em;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+    .price {
+      font-size: 1.3em;
+      margin-bottom: 0.3em;
+      color: var(--primary);
+    }
+    .card__action {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

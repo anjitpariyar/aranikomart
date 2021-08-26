@@ -1,0 +1,31 @@
+// デバイス別
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$sp: 425px; // スマホ
+
+//　基本SP 横幅
+/* 1カラム横幅 */
+$base_width: 98%;
+$base_sp_width:94%;
+
+/* 2カラム横幅 */
+$side_width:30%;
+$main_width:70%;
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}

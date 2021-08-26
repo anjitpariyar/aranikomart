@@ -1,0 +1,147 @@
+.home-screen {
+  .single--carousel {
+    article {
+      a {
+        display: block;
+      }
+      @include image;
+    }
+  }
+}
+
+.collections {
+  background-color: var(--white--grey);
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    min-height: 200px;
+    background-color: var(--white--grey);
+    background-image: linear-gradient(to bottom, transparent, #343434);
+    @include border-radius;
+
+    a {
+      text-decoration: none;
+      padding: 2em;
+      display: block;
+      height: 100%;
+      & > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .title--section {
+      margin-bottom: 0.6em;
+      font-size: 2em;
+    }
+    .card__img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      left: 0;
+      @include border-radius;
+      z-index: 0;
+    }
+    .tag {
+      margin-bottom: 1.4em;
+    }
+    &:first-child {
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+    }
+    &:nth-child(2) {
+      background-color: #efeff4;
+      background-image: none;
+    }
+    &:nth-child(3) {
+    }
+    &:last-child {
+      grid-column-end: span 2;
+    }
+  }
+}
+
+.newarrivals {
+  @include card;
+  background-color: var(--white--grey);
+  .card {
+    text-align: center;
+    padding: 2em;
+    .card__img {
+      height: 200px;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2em;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .common--arrows .slick-arrow {
+    color: var(--black);
+  }
+  .common--dots {
+    .slick-dots {
+      li {
+        &.slick-active {
+          border-color: var(--black);
+        }
+        button {
+          background: var(--black);
+        }
+      }
+    }
+  }
+}
+
+.product {
+  background-color: var(--white--grey);
+  @include card;
+  .card {
+    margin-bottom: 30px;
+    @include border-radius;
+    .text-muted {
+      font-size: 0.9em;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+    .progress {
+      height: 3px;
+      margin-bottom: 1.5em;
+      .progress-bar {
+        background-color: var(--primary);
+      }
+    }
+    .card__body {
+      padding: 1.2em 1em;
+    }
+    .para {
+      margin-bottom: 0;
+    }
+    .card__img {
+      overflow: hidden;
+      height: 230px;
+    }
+    .card__action {
+      padding: 1em;
+      padding-bottom: 0.5em;
+      position: absolute;
+      width: 100%;
+      bottom: -100%;
+      left: 0;
+      background-color: #fff;
+      @include transition;
+    }
+    &:hover {
+      .card__action {
+        bottom: 0;
+      }
+    }
+  }
+}

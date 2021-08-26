@@ -1,0 +1,47 @@
+header {
+  .navbar {
+    width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .nav-link {
+      color: var(--black);
+      span {
+        padding-left: 0.6em;
+      }
+      i {
+        font-size: 1.4em;
+        vertical-align: middle;
+      }
+      padding: 1em;
+    }
+  }
+  .brand {
+    margin-right: auto;
+    .nav-link {
+      font-size: 1.8em;
+      padding: 0;
+      font-weight: bold;
+    }
+  }
+  .search-form {
+    margin-right: auto;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 0.8em;
+      transform: translateY(-50%);
+    }
+    .form-wrapper {
+      position: relative;
+      .form-control {
+        text-indent: 1.4em;
+        width: 500px;
+        max-width: 100%;
+      }
+    }
+  }
+}

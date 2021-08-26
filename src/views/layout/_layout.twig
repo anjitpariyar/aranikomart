@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../webfonts/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/index.css"
+    />
+    {% block stylesheets %}{% endblock %} {# {% block javascripts %}{% endblock
+    %} #}
+  </head>
+  <body>
+    {% include "_header.twig" %}{% include "_nav.twig" %}{% block contents %}{%
+    endblock %} {% include "_footer.twig" %}
+    <script type="text/javascript" src="./js/jquery.bundle.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="./js/main.bundle.js"></script>
+
+    {# boottrap #}
+    <!-- <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.bundle.min.js" /> -->
+  </body>
+</html>
