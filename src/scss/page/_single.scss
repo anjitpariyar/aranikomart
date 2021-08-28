@@ -1,0 +1,79 @@
+.single-page {
+  .slider-for {
+    @include image;
+    .image {
+      height: 450px;
+    }
+    margin-bottom: 2em;
+  }
+  .slider-nav {
+    @include image;
+    margin-bottom: 2em;
+
+    .image img {
+      height: 60px;
+      width: 105px;
+    }
+    .slick-current {
+      img {
+        border: 2px solid var(--black);
+      }
+    }
+  }
+  @include card;
+  .sticky {
+    margin-bottom: 25px;
+  }
+  .card--main {
+    padding: 2em;
+
+    @include box-shadow;
+    .card__body {
+      font-size: 1.3em;
+    }
+    .card__action {
+      margin-bottom: 1.5em;
+      .common--button {
+        flex-grow: 2;
+        margin-right: 50px;
+      }
+    }
+    .share {
+      margin-bottom: 1em;
+    }
+  }
+  .card--description {
+    margin-bottom: 2em;
+  }
+  .comment--section {
+    .card {
+      background-color: var(--white--grey);
+      padding: 1.7em;
+      margin-bottom: 23px;
+
+      .comments__top {
+        opacity: 0.6;
+        border-bottom: 1px solid var(--grey);
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+      }
+      .comments__body {
+        p.para {
+          @include lineClamp(2);
+        }
+        &.active {
+          p.para {
+            -webkit-line-clamp: none;
+          }
+        }
+      }
+      a.link {
+        opacity: 0.6;
+      }
+    }
+  }
+  .newarrivals {
+    background-color: transparent;
+    margin-top: 2em;
+  }
+}

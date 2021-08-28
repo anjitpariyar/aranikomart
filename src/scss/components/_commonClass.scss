@@ -9,7 +9,7 @@
 }
 
 .btn {
-  border: 1.6px solid var(--darkgrey);
+  border: 1.6px solid var(--blackgrey);
   background-color: transparent;
   padding: 0.8em 1.5em;
   display: flex;
@@ -78,6 +78,10 @@
   @include sm {
     font-size: 1.2em;
   }
+}
+.title--md {
+  margin-bottom: 1em;
+  font-size: 1.5em;
 }
 
 .grid {
@@ -171,7 +175,7 @@
     height: 55px;
     width: 60px;
     z-index: 1;
-    background-color: var(--white) fff47;
+    background-color: #ffffff69;
     color: var(--white);
     font-size: 2em;
     text-align: center;
@@ -185,6 +189,12 @@
   }
   .slick-next {
     right: 0;
+  }
+  &.dark {
+    .slick-arrow {
+      background-color: var(--white);
+      color: var(--black);
+    }
   }
 }
 .common--dots {
@@ -230,6 +240,11 @@
     }
   }
 }
+.hide--dots {
+  .slick-dots {
+    display: none;
+  }
+}
 
 .tag {
   background-color: rgba(255, 255, 255, 0.2);
@@ -248,7 +263,8 @@
   padding: 8px 1em;
   background-color: #fff;
   @include transition;
-  &:hover {
+  &:hover,
+  &.active {
     color: var(--white);
     background-color: var(--black);
   }
@@ -305,4 +321,71 @@
       content: "\f285";
     }
   }
+}
+
+.accordion {
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+  }
+  .accordion-button {
+    padding-left: 0;
+    box-shadow: none !important;
+  }
+  .accordion-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 70px;
+}
+
+.add-cart {
+  margin: 2.5em 0px 1.5em;
+  input {
+    height: 35px;
+    width: 40px;
+    color: #333;
+    background-color: transparent;
+    border: none !important;
+    text-align: center;
+    box-shadow: none !important;
+  }
+  .wrapper {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .minus {
+      height: 100%;
+      text-align: center;
+      padding: 5px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border: 1px solid var(--black);
+      border-radius: 9px;
+      line-height: 1;
+      font-size: 0.7em;
+      height: 40px;
+      width: 40px;
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.form-group {
+  margin-bottom: 1.5em;
 }

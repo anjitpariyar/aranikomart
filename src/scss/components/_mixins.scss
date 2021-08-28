@@ -30,6 +30,14 @@
   align-items: $align;
 }
 
+@mixin lineClamp($line) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin border-radius {
   border-radius: 8px;
 }
@@ -37,7 +45,7 @@
   .card {
     &,
     a {
-      color: var(--dark);
+      color: var(--black);
       text-decoration: none;
     }
     .card__img {
@@ -64,5 +72,15 @@
       display: flex;
       justify-content: space-between;
     }
+    .progress {
+      height: 3px;
+      margin-bottom: 1.5em;
+      .progress-bar {
+        background-color: var(--primary);
+      }
+    }
   }
+}
+@mixin box-shadow {
+  box-shadow: 0 0.3125rem 1rem -0.1875rem rgba(0, 0, 0, 0.2);
 }
