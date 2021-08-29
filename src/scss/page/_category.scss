@@ -1,0 +1,37 @@
+.category-page {
+  .product {
+    background-color: transparent;
+  }
+  .card--filter {
+    padding: 1em;
+    @include box-shadow;
+    label {
+      margin-bottom: 1em;
+      color: var(--grey);
+    }
+    .title--md {
+      margin-bottom: -7px;
+    }
+    .form-control {
+      opacity: 0.7;
+    }
+    .price--wrapper {
+      display: flex;
+      align-items: center;
+      .price--middle {
+        width: 50px;
+        height: 2px;
+        background-color: var(--white--grey);
+        margin: 0 0.6em;
+        transform: translateY(20px);
+      }
+    }
+    .form-check {
+      margin-bottom: 0.6em;
+      label {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+}
