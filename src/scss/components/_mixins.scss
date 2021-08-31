@@ -84,3 +84,39 @@
 @mixin box-shadow {
   box-shadow: 0 0.3125rem 1rem -0.1875rem rgba(0, 0, 0, 0.2);
 }
+
+@mixin nav-tabs {
+  .nav {
+    position: relative;
+    .nav-item {
+      width: 25%;
+      text-align: center;
+      .nav-link {
+        color: var(--black);
+        opacity: 0.6;
+        width: 100%;
+        font-size: 1.5em;
+        padding: 0.8em 0;
+        @include transition;
+        &.active,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .indicator {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: var(--white--grey);
+      width: 100%;
+      left: 0;
+      div {
+        background-color: var(--primary);
+        height: 100%;
+        width: 0;
+        @include transition;
+      }
+    }
+  }
+}

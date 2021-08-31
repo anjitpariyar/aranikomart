@@ -1,0 +1,142 @@
+{% extends 'layout/_layout.twig' %} {% block title %} Aranikomart- Cart {%
+     endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+     <main class="main cart--page checkout--page">
+          <div class="wrapper commonpadding">
+               <div class="card">
+                    <ul class="nav ">
+                         <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#cart">Cart <sup class="sup">3</sup></a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./checkout">Checkout</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Payment</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Done</a>
+                         </li>
+                         <li class="indicator ">
+                              <div class="w-25"></div>
+                         </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                         <div class="tab-pane fade show active" id="cart" >
+                              <div class="cart--card">
+                                   <article class="card card--hr">
+                                        <a href="./single-page.html" class="card__img">
+                                             <img src="../img/product01.png">
+                                             <label class="tag">45% 0ff</label>
+                                             
+                                        </a>
+                                        <div class="card__body">
+                                             <div class="first--group">
+                                                  <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
+                                                  
+                                                  <p class="para"><b>250 ordered</b> of 300</p>
+                                             </div>
+                                             <div class="add-cart">
+                                                  <div class="wrapper">
+                                                       <a href="#!" id="minus" class="minus dec disabled">
+                                                            <i class="bi bi-dash-lg"></i>
+                                                       </a>
+                                                       <input id="qty" type="number" readonly="" value="1" min="1" max="5" class="qty">
+                                                       <a href="#!" id="plus" class="minus inc">
+                                                            <i class="bi bi-plus-lg"></i>
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="price--group">
+                                                  <p class="price">NRS 375</p>
+                                             </div>
+                                             <div class="card__action">
+                                                  <i class="bi bi-x-lg"></i>
+                                             </div>
+                                             
+                                        </div>
+                                   </article>
+                                   <hr />
+                                   <article class="card card--hr">
+                                        <a href="./single-page.html" class="card__img">
+                                             <img src="../img/product02.png">
+                                             <label class="tag">45% 0ff</label>
+                                             
+                                        </a>
+                                        <div class="card__body">
+                                             <div class="first--group">
+                                                  <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
+                                                  
+                                                  <p class="para"><b>250 ordered</b> of 300</p>
+                                             </div>
+                                             <div class="add-cart">
+                                                  <div class="wrapper">
+                                                       <a href="#!" id="minus" class="minus dec disabled">
+                                                            <i class="bi bi-dash-lg"></i>
+                                                       </a>
+                                                       <input id="qty" type="number" readonly="" value="1" min="1" max="5" class="qty">
+                                                       <a href="#!" id="plus" class="minus inc">
+                                                            <i class="bi bi-plus-lg"></i>
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="price--group">
+                                                  <p class="price">NRS 375</p>
+                                             </div>
+                                             <div class="card__action">
+                                                  <i class="bi bi-x-lg"></i>
+                                             </div>
+                                             
+                                        </div>
+                                   </article>
+                                   <hr />
+                                   <article class="card card--hr">
+                                        <a href="./single-page.html" class="card__img">
+                                             <img src="../img/product03.png">
+                                             <label class="tag">45% 0ff</label>
+                                             
+                                        </a>
+                                        <div class="card__body">
+                                             <div class="first--group">
+                                                  <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
+                                                  
+                                                  <p class="para"><b>250 ordered</b> of 300</p>
+                                             </div>
+                                             <div class="add-cart">
+                                                  <div class="wrapper">
+                                                       <a href="#!" id="minus" class="minus dec disabled">
+                                                            <i class="bi bi-dash-lg"></i>
+                                                       </a>
+                                                       <input id="qty" type="number" readonly="" value="1" min="1" max="5" class="qty">
+                                                       <a href="#!" id="plus" class="minus inc">
+                                                            <i class="bi bi-plus-lg"></i>
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="price--group">
+                                                  <p class="price">NRS 375</p>
+                                             </div>
+                                             <div class="card__action">
+                                                  <i class="bi bi-x-lg"></i>
+                                             </div>
+                                             
+                                        </div>
+                                   </article>
+                                   <hr />
+                                   <article class="card total">
+                                        <div>
+                                             <h2 class="card__title">Total Price</h2>
+                                             <p class="price">NRS 1125</p>
+                                        </div>
+                                   </article>
+                                   <article class="button--group">
+                                        <button class="common-button" onClick="window.location.href='/'">Back to shop</button>
+                                        <button class="common-button active" onClick="window.location.href='./checkout'">CHeckout</button>
+                                   </article>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>             
+     </main>
+</div>
+{% endblock %} 

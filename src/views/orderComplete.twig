@@ -1,0 +1,39 @@
+{% extends 'layout/_layout.twig' %} {% block title %} Aranikomart- checkout {%
+     endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+     <main class="main cart--page checkout--page">
+          <div class="wrapper commonpadding">
+               <div class="card">
+                    <ul class="nav ">
+                         <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="./cart">Cart <sup class="sup">3</sup></a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./checkout"  >Checkout</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="./checkout"  >Payment</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="active" tabindex="-1" aria-disabled="true">Done</a>
+                         </li>
+                         <li class="indicator ">
+                              <div class="w-100"></div>
+                         </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                         <div class="tab-pane fade show active" id="order" >
+                             <div class="sucess--wrapper card text-center ">
+                                   <img src="../img/check.png"  />
+                                   <h2 class="title--section">Successfully ordered!</h2>
+                                   <p class="para">And then she said that we would go to a clothing store and was very inspired</p>
+                                   <button class="common-button active" onClick="window.location.href='/'">Back to shoping</button>
+                             </div>
+                              
+                         </div>
+                         
+                    </div>
+               </div>
+          </div>             
+     </main>
+</div>
+{% endblock %} 

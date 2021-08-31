@@ -71,4 +71,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     $(this).parent().toggleClass("active");
   });
+  $("#checkout form").submit(function (e) {
+    e.preventDefault();
+    $("#checkout").removeClass("show active");
+    $("#payment").addClass("show active");
+    $("a[data-bs-target='#checkout']").removeClass("active");
+    $("a[data-bs-target='#payment']").addClass("active");
+    $(".indicator .w-50").addClass("w-75");
+  });
+  $("#backtocheckout").click(function (e) {
+    e.preventDefault();
+    $("#checkout").addClass("show active");
+    $("#payment").removeClass("show active");
+    $("a[data-bs-target='#checkout']").addClass("active");
+    $("a[data-bs-target='#payment']").removeClass("active");
+    $(".indicator .w-50").removeClass("w-75");
+  });
+  $("#payment form").submit(function (e) {
+    e.preventDefault();
+    window.location = "./orderComplete";
+  });
 });

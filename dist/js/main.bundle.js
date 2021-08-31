@@ -94,6 +94,23 @@
 /***/ (function(module, exports) {
 
 document.addEventListener("DOMContentLoaded", function () {
+  var tabEl = document.querySelector('a[data-bs-target="#payment"]');
+  var tabEl2 = document.querySelector('a[data-bs-target="#checkout"]');
+  tabEl.addEventListener("shown.bs.tab", function (event) {
+    event.target; // newly activated tab
+
+    console.log("hi"); // previous active tab
+
+    document.querySelector(".indicator .w-50").classList.add("w-75");
+  });
+  tabEl2.addEventListener("shown.bs.tab", function (event) {
+    event.target; // newly activated tab
+
+    console.log("hi"); // previous active tab
+
+    document.querySelector(".indicator .w-50").classList.remove("w-75");
+  });
+
   if (window.innerWidth < 992) {
     // close all inner dropdowns when parent is closed
     document.querySelectorAll(".dropdown").forEach(function (everydropdown) {

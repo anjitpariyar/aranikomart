@@ -34,8 +34,6 @@
     @include transition;
   }
   &:hover {
-    span {
-    }
     .arrowbtn {
       g {
         stroke: var(--white);
@@ -392,4 +390,24 @@
 }
 .breadcrumb-item {
   padding: 1em 0;
+}
+sup {
+  background-color: var(--white--grey);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 25px;
+}
+.button--group {
+  display: flex;
+  justify-content: space-between;
+}
+.sucess--wrapper {
+  max-width: 500px;
+  margin: auto;
+  img {
+    width: 250px;
+    margin: auto;
+  }
 }
