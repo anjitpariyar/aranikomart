@@ -1,0 +1,19 @@
+.modal--common {
+  .modal-content {
+    padding: 2em;
+  }
+  .modal-header {
+    .title--md {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.modal--form {
+  form {
+    padding-top: 1em;
+    button[type="submit"] {
+      margin-top: 1em;
+    }
+  }
+}

@@ -9,10 +9,10 @@
           <div class="form-wrapper">
             <i class="bi bi-search"></i>
             <input
-              class="form-control"
-              type="search"
-              list="search-list"
-              placeholder="Search"
+            class="form-control"
+            type="search"
+            list="search-list"
+            placeholder="Search"
             />
             <datalist id="search-list">
               <option value="Search 1"></option>
@@ -30,11 +30,111 @@
           <a href="/" class="nav-link"><i class="bi bi-bell"></i></a>
         </li>
         <li class="nav-item">
-          <a href="/" class="nav-link"
-            ><i class="bi bi-person"></i><span>Login</span></a
+          <a
+          href="/"
+          class="nav-link"
+          data-bs-toggle="modal"
+          data-bs-target="#modal--login"
+          ><i class="bi bi-person"></i><span>Login</span></a
           >
         </li>
       </ul>
     </nav>
   </div>
 </header>
+
+<div
+class="modal fade modal--common modal--form"
+id="modal--login"
+tabindex="-1"
+id=""
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="title--md">Login</h5>
+      <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form >
+        <div class="form-group">
+          <label for="phnum" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phnum" />
+        </div>
+        <div class="form-group">
+          <label for="pass" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="common-button active">Login</button>
+        </div>
+        <div class="form-text">Forget password ? <a href="#">Reset Here</a></div>
+        <div class="form-text">
+          Don't have account ?
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modal--signup"
+          >Sign up</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<div
+class="modal fade modal--common modal--form"
+id="modal--signup"
+tabindex="-1"
+id=""
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="title--md">Sign up</h5>
+      <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form id="form--signup">
+        <div class="form-group">
+          <label for="phnum--signup" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phnum--signup" />
+        </div>
+        <div class="form-group">
+          <label for="pass--signup" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass--signup" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="common-button active">Next</button>
+        </div>
+        
+      </form>
+      <form class="hide">
+        <div class="form-group">
+          <label for="otp" class="form-label">We have send you 6 digits code on <span id="label--ph">98XXXXXX89</span></label>
+          <input type="number" class="form-control" id="otp" maxlength="6" />
+        </div>
+        <div class="form-text">
+          Didnt receive code? <a href="#">Resend </a>
+        </div>
+      </form>
+      <div class="form-text">
+        Already have account ?
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modal--login"
+        >Login</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

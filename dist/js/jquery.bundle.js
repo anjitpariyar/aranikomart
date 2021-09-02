@@ -188,6 +188,16 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     window.location = "./orderComplete";
   });
+  $("#form--signup").submit(function (e) {
+    e.preventDefault();
+    $(this).hide("fast");
+    $(this).next().show("fast");
+    var ph = $("#phnum--signup").val();
+
+    if (ph) {
+      $("#label--ph").text(ph[0] + ph[1] + "XXXXXX" + ph[8] + ph[9]);
+    }
+  });
 });
 
 /***/ })

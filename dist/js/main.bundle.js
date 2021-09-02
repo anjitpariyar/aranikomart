@@ -94,22 +94,24 @@
 /***/ (function(module, exports) {
 
 document.addEventListener("DOMContentLoaded", function () {
-  var tabEl = document.querySelector('a[data-bs-target="#payment"]');
-  var tabEl2 = document.querySelector('a[data-bs-target="#checkout"]');
-  tabEl.addEventListener("shown.bs.tab", function (event) {
-    event.target; // newly activated tab
+  if (document.querySelector("main").classList.contains("checkout--page")) {
+    var tabEl = document.querySelector('a[data-bs-target="#payment"]');
+    var tabEl2 = document.querySelector('a[data-bs-target="#checkout"]');
+    tabEl.addEventListener("shown.bs.tab", function (event) {
+      event.target; // newly activated tab
 
-    console.log("hi"); // previous active tab
+      console.log("hi"); // previous active tab
 
-    document.querySelector(".indicator .w-50").classList.add("w-75");
-  });
-  tabEl2.addEventListener("shown.bs.tab", function (event) {
-    event.target; // newly activated tab
+      document.querySelector(".indicator .w-50").classList.add("w-75");
+    });
+    tabEl2.addEventListener("shown.bs.tab", function (event) {
+      event.target; // newly activated tab
 
-    console.log("hi"); // previous active tab
+      console.log("hi"); // previous active tab
 
-    document.querySelector(".indicator .w-50").classList.remove("w-75");
-  });
+      document.querySelector(".indicator .w-50").classList.remove("w-75");
+    });
+  }
 
   if (window.innerWidth < 992) {
     // close all inner dropdowns when parent is closed
@@ -138,7 +140,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-  }
+  } // modal close and open
+
+
+  var signupModal = document.getElementById("modal--signup");
+  var loginModal = document.getElementById("modal--login");
+  var myModal = new bootstrap.Modal(loginModal, {
+    keyboard: false
+  });
+  var mySignupModal = new bootstrap.Modal(signupModal, {
+    keyboard: false
+  });
+  signupModal.addEventListener("show.bs.modal", function (event) {
+    myModal.hide(loginModal);
+  });
+  loginModal.addEventListener("show.bs.modal", function (event) {
+    mySignupModal.hide(signupModal);
+  });
 });
 
 /***/ })
