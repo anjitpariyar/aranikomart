@@ -1,0 +1,185 @@
+{% extends 'layout/_layout.twig' %} {% block title %} Anjit - profile {%
+     endblock %} {% block javascripts %} {% endblock %} {% block contents %}
+     <main class="main profile--page">
+          <section class="wrapper commonpadding ">
+               <div class="row">
+                    <aside class="aside--left col-md-3">
+                         <div class="sticky">
+                              <ul class="nav flex-column">
+                                   <li class="nav-item">
+                                        <a class="nav-link active"  href="#general" data-bs-toggle="tab" data-bs-target="#general"><i class="bi bi-person"></i> <span> General Information</span></a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link"   href="#noti" data-bs-toggle="tab" data-bs-target="#noti"><i class="bi bi-bell"></i> <span>My Notifications</span></a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link" href="./tab--order" data-bs-toggle="tab" data-bs-target="#tab--order"><i class="bi bi-x-diamond"></i><span>My Orders</span> </a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#tab--password"><i class="bi bi-key"></i><span> Change Password</span></a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link " href="#"> <i class="bi bi-person-x"></i><span>Logout</span> </a>
+                                   </li>
+                              </ul>
+                         </div>
+                         
+                    </aside>
+                    <aside class="aside--right col-md-9">
+                         <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="general">
+                                   <form class="form">
+                                        
+                                        <div class="row">
+                                             <div class="form-group col-sm-6">
+                                                  <label for="firstName">First Name</label>
+                                                  <input type="text" value="Jeevan" class="form-control" id="firstName"  />
+                                             </div>
+                                             <div class="form-group col-sm-6">
+                                                  <label for="lastName">Last Name</label>
+                                                  <input type="text" value="Lamichaane" class="form-control" id="lastName"  />
+                                             </div>
+                                        </div>
+                                        <div class="row">
+                                             <div class="form-group col-sm-6">
+                                                  <label for="phnumber">Phone Number</label>
+                                                  <input type="tel" value="9825131071" class="form-control" id="phnumber"  />
+                                             </div>
+                                             <div class="form-group col-sm-6">
+                                                  <label for="email">Email</label>
+                                                  <input type="email" value="anjitpariyar@gmail.com" class="form-control" id="email"/>
+                                             </div>
+                                        </div>
+                                        <div class="row">
+                                             
+                                             <div class="form-group col-sm-6">
+                                                  <label for="address">Address</label>
+                                                  <input type="text" value="" placeholder="address" class="form-control" id="address"/>
+                                             </div>
+                                             <div class="form-group col-sm-6">
+                                                  <label for="City">City</label>
+                                                  <input type="text" value="" placeholder="city" class="form-control" id="City"/>
+                                             </div>
+                                        </div>
+                                        <article class="button--group">
+                                             
+                                             <button class="common-button" type="submit">Save Change</button>
+                                        </article>
+                                   </form>
+                              </div> 
+                              <div class="tab-pane fade tab--order" id="tab--order">
+                                   <div class="d-flex justify-content-between">
+                                        <h2 class="title--md">Total order: 7</h2>
+                                        <h2 class="title--md">Completed order: 6</h2>
+                                        <h2 class="title--md">Cancel order: 2</h2>
+                                   </div>
+                                   
+                                   
+                                   <div class="card card--panel">
+                                        <h2 class="card__title"><small class="text-muted">Order Id :</small> araniko123</h2>
+                                        <h2 class="card__title"><small class="text-muted">Pay Mode :</small> Cash on delivery</h2>
+                                        <h2 class="card__title"><small class="text-muted">Order status :</small> 1 delivered out of 4</h2>
+                                        <h2 class="card__title"><small class="text-muted">Total Price :</small> NRS 1125</h2>
+                                        <h2 class="card__title"><small class="text-muted">Ordered Date :</small> 2020/02/20 </h2>
+                                        <a class="link card--link"  data-bs-toggle="collapse" href="#order1">View Details <i class="bi bi-chevron-right"></i></a>
+                                        
+                                        <div class="details cart--page collapse" id="order1">
+                                             <div class="cart--card">
+                                                  <article class="card card--hr">
+                                                       <a href="./single-page.html" class="card__img">
+                                                            <img src="../img/product01.png">
+                                                       </a>
+                                                       <div class="card__body">
+                                                            <div class="first--group">
+                                                                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
+                                                                 <p class="text-muted">qty : 1</p>
+                                                                 <p class="price">NRS 375</p>
+                                                            </div>
+                                                            <div class="div--group">
+                                                                 <p class="text-muted">last ordered 3m ago</p>
+                                                                 <div class="progress">
+                                                                      <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                                                 </div>
+                                                            </div>     
+                                                            
+                                                            
+                                                            <div class="card__action">
+                                                                 <button class="common-button">Cancel order</button>
+                                                            </div>
+                                                            
+                                                       </div>
+                                                  </article>
+                                                  <article class="card card--hr">
+                                                       <a href="./single-page.html" class="card__img">
+                                                            <img src="../img/product02.png">
+                                                       </a>
+                                                       <div class="card__body">
+                                                            <div class="first--group">
+                                                                 <h2 class="card__title"><a href="./html/single-page.html">Red dress ValentinoRed dress </a></h2>
+                                                                 <p class="text-muted">qty : 1</p>
+                                                                 <p class="price">NRS 375</p>
+                                                            </div>
+                                                            <div class="div--group">
+                                                                 <p class="text-muted">Order Completed</p>
+                                                                 <div class="progress">
+                                                                      <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                                                 </div>
+                                                            </div>     
+                                                            
+                                                            
+                                                            <div class="card__action">
+                                                                 <button class="common-button">Delivered</button>
+                                                            </div>
+                                                            
+                                                       </div>
+                                                  </article>
+                                             </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                   </div>
+                              </div>
+                              <div class="tab-pane fade notification" id="noti">
+                                   <div class="alert alert-light" role="alert">
+                                        A simple light alert—check it out!. <a href="http://" class="link"> Click Here</a>
+                                   </div>
+                                   <div class="alert alert-info" role="alert">
+                                        A simple info alert—check it out!
+                                   </div>
+                                   <div class="alert alert-warning" role="alert">
+                                        A simple warning alert—check it out!
+                                   </div>
+                                   <div class="alert alert-danger" role="alert">
+                                        A simple danger alert—check it out!
+                                   </div>
+                                   <div class="alert alert-success" role="alert">
+                                        A simple success alert—check it out!
+                                   </div>
+                              </div>
+                              <div class="tab-pane fade " id="tab--password">
+                                   <form class="form">
+                                        
+                                        <div class="wrapper--small">
+                                             <div class="form-group">
+                                                  <label for="currentPass">Current Password</label>
+                                                  <input type="password" value="Jeevan" class="form-control" id="currentPass"  />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="newpass">New Password</label>
+                                                  <input type="password" value="Lamichaane" class="form-control" id="newpass"  />
+                                             </div>
+                                             <div class="form-group">
+                                                  <button type="submit" class="common-button active">Change Password</button>
+                                             </div>     
+                                        </div>
+                                   </form>
+                              </div>
+                              
+                         </div>       
+                    </aside>
+               </div>
+          </section>
+     </main>
+</div>
+{% endblock %} 
