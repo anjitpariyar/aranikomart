@@ -19,14 +19,7 @@ header {
       padding: 1em;
     }
   }
-  .brand {
-    margin-right: auto;
-    .nav-link {
-      font-size: 1.8em;
-      padding: 0;
-      font-weight: bold;
-    }
-  }
+
   .search-form {
     margin-right: auto;
     i {
@@ -43,5 +36,14 @@ header {
         max-width: 100%;
       }
     }
+  }
+}
+.brand {
+  margin-right: auto;
+  .nav-link {
+    font-size: 1.8em;
+    padding: 0;
+    font-weight: bold;
+    color: var(--black);
   }
 }

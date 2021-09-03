@@ -1,6 +1,19 @@
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 10vh;
+  .brand .nav-link {
+    margin-bottom: 1em;
+  }
+  ul {
+    @include ul;
+    list-style: none;
+  }
+  .link {
+    padding: 0.4em 0;
+    display: inline-block;
+  }
+  .social {
+    font-size: 1.3em;
+    a {
+      margin-right: 1em;
+    }
+  }
 }
