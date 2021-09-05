@@ -2,15 +2,34 @@
   .product {
     background-color: transparent;
   }
+  .sticky {
+    @include md {
+      position: relative;
+      top: 0;
+    }
+  }
   .card--filter {
     padding: 1em;
     @include box-shadow;
+    @include md {
+      margin-bottom: 2em;
+    }
     label {
       margin-bottom: 1em;
       color: var(--grey);
     }
     .title--md {
       margin-bottom: -7px;
+      &.title {
+        display: flex;
+        justify-content: space-between;
+        i {
+          display: none;
+          @include md {
+            display: block;
+          }
+        }
+      }
     }
     .form-control {
       opacity: 0.7;
@@ -31,6 +50,11 @@
       label {
         margin-bottom: 0;
         width: 100%;
+      }
+    }
+    .hide--mob {
+      @include md {
+        display: none;
       }
     }
   }

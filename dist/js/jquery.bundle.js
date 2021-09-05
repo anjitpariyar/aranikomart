@@ -101,8 +101,15 @@ document.addEventListener("DOMContentLoaded", function () {
     dots: true,
     arrows: true,
     autoPlay: true,
+    swipeToSlide: true,
     prevArrow: "<button class=' slick-prev '><i class=\"bi bi-chevron-left\"></i></button>",
-    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>"
+    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>",
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $(".newarrivals .carousel").slick({
     infinite: true,
@@ -111,8 +118,24 @@ document.addEventListener("DOMContentLoaded", function () {
     dots: true,
     arrows: true,
     autoPlay: false,
+    swipeToSlide: true,
     prevArrow: "<button class=' slick-prev '><i class=\"bi bi-chevron-left\"></i></button>",
-    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>"
+    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>",
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }]
   });
   $(".dropdown-toggle").dropdown();
   $(".slider-for").slick({
@@ -120,9 +143,16 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesToScroll: 1,
     arrows: true,
     fade: true,
+    swipeToSlide: true,
     asNavFor: ".slider-nav",
     prevArrow: "<button class=' slick-prev '><i class=\"bi bi-chevron-left\"></i></button>",
-    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>"
+    nextArrow: "<button class=' slick-next '><i class=\"bi bi-chevron-right\"></i></button>",
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+    }]
   });
   $(".slider-nav").slick({
     slidesToShow: 6,
@@ -133,7 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
     focusOnSelect: true,
     arrows: false,
     infinite: false,
-    centerPadding: 0
+    centerPadding: 0,
+    swipeToSlide: true
   });
   $(".dec").click(function () {
     var qtyNode = $(this).next();
@@ -198,6 +229,18 @@ document.addEventListener("DOMContentLoaded", function () {
       $("#label--ph").text(ph[0] + ph[1] + "XXXXXX" + ph[8] + ph[9]);
     }
   });
+  $(".hamburger a").click(function (e) {
+    $("nav.primary-nav").toggleClass("active");
+  });
+  $("nav.primary-nav .backdrop").click(function (e) {
+    $("nav.primary-nav").removeClass("active");
+  });
+
+  if (window.innerWidth < 800) {
+    $(".category-page .title--md.title").click(function (e) {
+      $(this).parent().find(".hide--mob").toggle("slow");
+    });
+  }
 });
 
 /***/ })

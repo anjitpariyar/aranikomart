@@ -1,6 +1,9 @@
 .modal--common {
   .modal-content {
     padding: 2em;
+    @include sm {
+      padding: 1em;
+    }
   }
   .modal-header {
     .title--md {

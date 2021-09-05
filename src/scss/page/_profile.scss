@@ -4,14 +4,24 @@
       @include box-shadow;
       @include border-radius;
       padding: 2em 0;
+      @include md {
+        padding: 0;
+        margin-bottom: 2em;
+      }
 
       .nav-link {
         color: var(--black);
         padding: 0.8em 2em;
+        @include sm {
+          font-size: 0.9em;
+        }
         i {
           font-size: 1.5em;
           vertical-align: middle;
           margin-right: 0.5em;
+          @include sm {
+            font-size: 1.3em;
+          }
         }
         &.active {
           background-color: var(--primary);
@@ -23,6 +33,9 @@
   .aside--right {
     .tab-content {
       padding-left: 2em;
+      @include xl {
+        padding-left: 0;
+      }
     }
     .form-group {
       margin-bottom: 2em;
@@ -33,6 +46,19 @@
   }
   .tab--order {
     @include card;
+    .d-flex.justify-content-between {
+      @include sm {
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+        gap: 1em;
+        margin-bottom: 1em;
+      }
+      .title--md {
+        @include sm {
+          margin-bottom: 0;
+        }
+      }
+    }
     .card {
       background-color: var(--white--grey);
       padding: 1.7em;
@@ -46,19 +72,35 @@
         display: flex;
         justify-content: space-between;
       }
+      @include sm {
+        padding: 1em;
+        font-size: 1em;
+      }
     }
     .cart--card {
       .card {
         padding: 1em;
         font-size: 1em;
         margin-bottom: 0;
+        @include xl {
+          padding: 1em 0;
+        }
         .card__img {
           height: 50px;
           width: 50px;
+          min-width: 50px;
         }
         .first--group {
           padding: 0;
           min-width: 280px;
+          padding-left: 12px;
+          @include xl {
+            min-width: 200px;
+          }
+          @include sm {
+            min-width: 160px;
+            white-space: normal;
+          }
         }
         .card__title,
         p,
@@ -68,8 +110,22 @@
         }
         .common-button {
           font-size: 0.8em;
+          @include sm {
+            white-space: nowrap;
+          }
+        }
+        .progress {
+          min-width: 120px;
         }
       }
+    }
+  }
+  @include sm {
+    margin-bottom: 5em;
+  }
+  & + footer {
+    @include sm {
+      display: none;
     }
   }
 }

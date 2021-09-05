@@ -64,6 +64,9 @@
 }
 .commonpadding {
   padding: 2.6em 0;
+  @include sm {
+    padding: 15px 0;
+  }
 }
 
 .title--section {
@@ -72,8 +75,8 @@
   line-height: 1.5;
   margin-bottom: 1em;
   color: var(--black);
-  @include lg {
-    // font-size: 2em;
+  @include xl {
+    font-size: 2em;
   }
   @include sm {
     font-size: 1.2em;
@@ -82,6 +85,9 @@
 .title--md {
   margin-bottom: 1em;
   font-size: 1.5em;
+  @include sm {
+    font-size: 1em;
+  }
 }
 
 .grid {
@@ -161,6 +167,9 @@
   &.sucess {
     border-color: green;
   }
+  @include sm {
+    height: 44px;
+  }
 }
 
 .card {
@@ -169,6 +178,9 @@
 
 .common-padding {
   padding: 40px 0;
+  @include sm {
+    padding: 15px 0;
+  }
 }
 .common--arrows {
   .slick-arrow {
@@ -253,6 +265,10 @@
   @include border-radius;
   &.text--white {
     color: var(--white);
+  }
+  @include sm {
+    font-size: 12px;
+    padding: 0.5em 1em;
   }
 }
 
@@ -339,10 +355,17 @@
 .sticky {
   position: sticky;
   top: 70px;
+  @include md {
+    position: relative;
+    top: 0;
+  }
 }
 
 .add-cart {
   margin: 2.5em 0px 1.5em;
+  @include md {
+    margin: 1em 0;
+  }
   input {
     height: 35px;
     width: 40px;
@@ -379,6 +402,10 @@
       font-size: 0.7em;
       height: 40px;
       width: 40px;
+      @include sm {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 }
@@ -399,6 +426,7 @@ sup {
   border-radius: 50%;
   display: inline-block;
   line-height: 25px;
+  text-align: center;
 }
 .button--group {
   display: flex;
@@ -422,4 +450,17 @@ sup {
 }
 .ml-auto {
   margin-left: auto;
+}
+
+.row {
+  @include sm {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  & > * {
+    @include sm {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
 }

@@ -1,27 +1,45 @@
 header {
   .navbar {
     width: 100%;
+    @include md {
+      padding-bottom: 1.2em;
+    }
   }
   .navbar-nav {
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
+    @include md {
+      flex-wrap: wrap;
+    }
     .nav-link {
       color: var(--black);
       span {
         padding-left: 0.6em;
+        @include md {
+          display: none;
+        }
       }
       i {
         font-size: 1.4em;
         vertical-align: middle;
       }
       padding: 1em;
+      @include md {
+        padding: 0.2em 0em;
+      }
+      @include sm {
+        padding: 0;
+      }
     }
   }
 
   .search-form {
     margin-right: auto;
+    @include md {
+      width: 100%;
+    }
     i {
       position: absolute;
       top: 50%;
@@ -34,6 +52,53 @@ header {
         text-indent: 1.4em;
         width: 500px;
         max-width: 100%;
+        @include xl {
+          width: 320px;
+        }
+        @include md {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    @include xl {
+      display: block;
+    }
+    .nav-link i {
+      @include md {
+        font-size: 2em;
+      }
+    }
+  }
+  .mb--nav {
+    display: flex;
+    @include md {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 9;
+      background-color: var(--white);
+      border-radius: 5px 5px 0 0;
+      @include box-shadow;
+      justify-content: space-around;
+    }
+    .home {
+      display: none;
+      @include md {
+        display: block;
+      }
+    }
+    .nav-item {
+      .nav-link {
+        @include md {
+          height: 50px;
+          width: 50px;
+          text-align: center;
+          line-height: 50px;
+        }
       }
     }
   }
@@ -45,5 +110,8 @@ header {
     padding: 0;
     font-weight: bold;
     color: var(--black);
+    @include sm {
+      font-size: 1em;
+    }
   }
 }

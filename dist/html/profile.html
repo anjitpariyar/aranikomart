@@ -40,6 +40,13 @@
         <li class="nav-item brand">
           <a href="/" class="nav-link logo">ARANIKOMART</a>
         </li>
+        <li class="nav-item hamburger">
+          <a
+          href="#!"
+          class="nav-link"
+          ><i class="bi bi-list"></i><span></span></a
+          >
+        </li>
         <li class="nav-item search-form">
           <div class="form-wrapper">
             <i class="bi bi-search"></i>
@@ -58,21 +65,26 @@
             </datalist>
           </div>
         </li>
-        <li class="nav-item">
-          <a href="/html/cart" class="nav-link"><i class="bi bi-cart2"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="/" class="nav-link"><i class="bi bi-bell"></i></a>
-        </li>
-        <li class="nav-item">
-          <a
-          href="/"
-          class="nav-link"
-          data-bs-toggle="modal"
-          data-bs-target="#modal--login"
-          ><i class="bi bi-person"></i><span>Login</span></a
-          >
-        </li>
+        <div class="mb--nav">
+          <li class="nav-item home">
+            <a href="/" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="19.359" height="18" viewBox="0 0 19.359 18"><g id="Group_3182" data-name="Group 3182" transform="translate(-807.653 -8681.079)"><path id="Path_1066" data-name="Path 1066" d="M807.653,8690.759l9.68-9.68,9.68,9.68h-2.96v8.32h-4.16v-5.6h-4.96v5.6h-4.32v-8.32Z" fill="#232323"></path></g></svg></a>
+          </li>
+          <li class="nav-item">
+            <a href="/html/cart" class="nav-link"><i class="bi bi-cart2"></i><sup>2</sup></a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link"><i class="bi bi-bell"></i></a>
+          </li>
+          <li class="nav-item">
+            <a
+            href="/"
+            class="nav-link"
+            data-bs-toggle="modal"
+            data-bs-target="#modal--login"
+            ><i class="bi bi-person"></i><span>Login</span></a
+            >
+          </li>
+        </div>
       </ul>
     </nav>
   </div>
@@ -475,12 +487,13 @@ id=""
         </ul>
       </li>
     </ul>
+    <div class="backdrop"></div>
   </div>
 </nav>
      <main class="main profile--page">
           <section class="wrapper commonpadding ">
                <div class="row">
-                    <aside class="aside--left col-md-3">
+                    <aside class="aside--left col-lg-3">
                          <div class="sticky">
                               <ul class="nav flex-column">
                                    <li class="nav-item">
@@ -490,10 +503,10 @@ id=""
                                         <a class="nav-link"   href="#noti" data-bs-toggle="tab" data-bs-target="#noti"><i class="bi bi-bell"></i> <span>My Notifications</span></a>
                                    </li>
                                    <li class="nav-item">
-                                        <a class="nav-link" href="./tab--order" data-bs-toggle="tab" data-bs-target="#tab--order"><i class="bi bi-x-diamond"></i><span>My Orders</span> </a>
+                                        <a class="nav-link" href="#tab--order" data-bs-toggle="tab" data-bs-target="#tab--order"><i class="bi bi-x-diamond"></i><span>My Orders</span> </a>
                                    </li>
                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#tab--password"><i class="bi bi-key"></i><span> Change Password</span></a>
+                                        <a class="nav-link" href="#tab--password" data-bs-toggle="tab" data-bs-target="#tab--password"><i class="bi bi-key"></i><span> Change Password</span></a>
                                    </li>
                                    <li class="nav-item">
                                         <a class="nav-link " href="#"> <i class="bi bi-person-x"></i><span>Logout</span> </a>
@@ -502,11 +515,11 @@ id=""
                          </div>
                          
                     </aside>
-                    <aside class="aside--right col-md-9">
+                    <aside class="aside--right col-lg-9">
                          <div class="tab-content" id="myTabContent">
                               <div class="tab-pane fade show active" id="general">
                                    <form class="form">
-                                        
+                                        <h2 class="title--md">General Information</h2>
                                         <div class="row">
                                              <div class="form-group col-sm-6">
                                                   <label for="firstName">First Name</label>
@@ -545,6 +558,8 @@ id=""
                                    </form>
                               </div> 
                               <div class="tab-pane fade tab--order" id="tab--order">
+                                        <h2 class="title--md">My Order</h2>
+
                                    <div class="d-flex justify-content-between">
                                         <h2 class="title--md">Total order: 7</h2>
                                         <h2 class="title--md">Completed order: 6</h2>
@@ -618,6 +633,8 @@ id=""
                                    </div>
                               </div>
                               <div class="tab-pane fade notification" id="noti">
+                                        <h2 class="title--md">Notifications</h2>
+
                                    <div class="alert alert-light" role="alert">
                                         A simple light alert—check it out!. <a href="http://" class="link"> Click Here</a>
                                    </div>
@@ -636,7 +653,7 @@ id=""
                               </div>
                               <div class="tab-pane fade " id="tab--password">
                                    <form class="form">
-                                        
+                                        <h2 class="title--md">Change Password</h2>
                                         <div class="wrapper--small">
                                              <div class="form-group">
                                                   <label for="currentPass">Current Password</label>
@@ -662,7 +679,7 @@ id=""
  <footer>
   <div class="wrapper commonpadding">
     <div class="row">
-      <div class="col">
+      <div class="col first--row">
         <ul>
           <li class="nav-item brand">
             <a href="/" class="nav-link logo">ARANIKOMART</a>

@@ -40,6 +40,13 @@
         <li class="nav-item brand">
           <a href="/" class="nav-link logo">ARANIKOMART</a>
         </li>
+        <li class="nav-item hamburger">
+          <a
+          href="#!"
+          class="nav-link"
+          ><i class="bi bi-list"></i><span></span></a
+          >
+        </li>
         <li class="nav-item search-form">
           <div class="form-wrapper">
             <i class="bi bi-search"></i>
@@ -58,21 +65,26 @@
             </datalist>
           </div>
         </li>
-        <li class="nav-item">
-          <a href="/html/cart" class="nav-link"><i class="bi bi-cart2"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="/" class="nav-link"><i class="bi bi-bell"></i></a>
-        </li>
-        <li class="nav-item">
-          <a
-          href="/"
-          class="nav-link"
-          data-bs-toggle="modal"
-          data-bs-target="#modal--login"
-          ><i class="bi bi-person"></i><span>Login</span></a
-          >
-        </li>
+        <div class="mb--nav">
+          <li class="nav-item home">
+            <a href="/" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="19.359" height="18" viewBox="0 0 19.359 18"><g id="Group_3182" data-name="Group 3182" transform="translate(-807.653 -8681.079)"><path id="Path_1066" data-name="Path 1066" d="M807.653,8690.759l9.68-9.68,9.68,9.68h-2.96v8.32h-4.16v-5.6h-4.96v5.6h-4.32v-8.32Z" fill="#232323"></path></g></svg></a>
+          </li>
+          <li class="nav-item">
+            <a href="/html/cart" class="nav-link"><i class="bi bi-cart2"></i><sup>2</sup></a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link"><i class="bi bi-bell"></i></a>
+          </li>
+          <li class="nav-item">
+            <a
+            href="/"
+            class="nav-link"
+            data-bs-toggle="modal"
+            data-bs-target="#modal--login"
+            ><i class="bi bi-person"></i><span>Login</span></a
+            >
+          </li>
+        </div>
       </ul>
     </nav>
   </div>
@@ -475,6 +487,7 @@ id=""
         </ul>
       </li>
     </ul>
+    <div class="backdrop"></div>
   </div>
 </nav>
   <main class="main home-page">
@@ -599,7 +612,7 @@ id=""
       <div class="wrapper commonpadding">
         <h2 class="title--section">Just for you</h2>
         <div class="row">
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product01.png"/>
@@ -612,7 +625,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -621,7 +634,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product02.png"/>
@@ -636,7 +649,7 @@ id=""
                   Valentino</a>
                 </h2>
                 <p class="price">NRS 1650</p>
-                <p class="text-muted">last ordered 30m ago</p>
+                <p class="text-muted order--text">last ordered 30m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 25%"></div>
                 </div>
@@ -645,7 +658,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product03.png"/>
@@ -658,7 +671,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Shiny dress Givenchy</a></h2>
                 <p class="price">NRS 750</p>
-                <p class="text-muted">last ordered 36m ago</p>
+                <p class="text-muted order--text">last ordered 36m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 95%"></div>
                 </div>
@@ -667,7 +680,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product01.png"/>
@@ -680,7 +693,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -689,7 +702,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product02.png"/>
@@ -702,7 +715,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -711,7 +724,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product03.png"/>
@@ -724,7 +737,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -733,7 +746,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product01.png"/>
@@ -746,7 +759,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -755,7 +768,7 @@ id=""
               </div>
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="card">
               <a href="./single-page.html" class="card__img">
                 <img src="../img/product02.png"/>
@@ -768,7 +781,7 @@ id=""
               <div class="card__body">
                 <h2 class="card__title"><a href="./html/single-page.html">Women's black vest Gucci</a></h2>
                 <p class="price">NRS 375</p>
-                <p class="text-muted">last ordered 3m ago</p>
+                <p class="text-muted order--text">last ordered 3m ago</p>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                 </div>
@@ -779,7 +792,7 @@ id=""
           </article>
         </div>
         <div class="row">
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="ssc ssc-card" style="max-width: 300px; margin-right: 16px">
               <div class="ssc-wrapper">
                 <div class="ssc-square mb"></div>
@@ -797,7 +810,7 @@ id=""
               
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="ssc ssc-card" style="max-width: 300px; margin-right: 16px">
               <div class="ssc-wrapper">
                 <div class="ssc-square mb"></div>
@@ -815,7 +828,7 @@ id=""
               
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="ssc ssc-card" style="max-width: 300px; margin-right: 16px">
               <div class="ssc-wrapper">
                 <div class="ssc-square mb"></div>
@@ -833,7 +846,7 @@ id=""
               
             </div>
           </article>
-          <article class="col-md-4 col-lg-3">
+          <article class="col-6 col-lg-4 col-xl-3">
             <div class="ssc ssc-card" style="max-width: 300px; margin-right: 16px">
               <div class="ssc-wrapper">
                 <div class="ssc-square mb"></div>
@@ -861,7 +874,7 @@ id=""
  <footer>
   <div class="wrapper commonpadding">
     <div class="row">
-      <div class="col">
+      <div class="col first--row">
         <ul>
           <li class="nav-item brand">
             <a href="/" class="nav-link logo">ARANIKOMART</a>

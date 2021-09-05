@@ -3,6 +3,9 @@
     @include image;
     .image {
       height: 450px;
+      @include sm {
+        height: 280px;
+      }
     }
     margin-bottom: 2em;
   }
@@ -23,16 +26,36 @@
   @include card;
   .sticky {
     margin-bottom: 25px;
+    @include md {
+      position: relative;
+      top: 0;
+    }
   }
   .card--main {
     padding: 2em;
-
+    @include md {
+      padding: 1em;
+    }
     @include box-shadow;
     .card__body {
       font-size: 1.3em;
+      @include sm {
+        font-size: 0.9em;
+      }
     }
     .card__action {
       margin-bottom: 1.5em;
+      @include md {
+        margin: 0;
+        position: fixed;
+        bottom: 0px;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        padding: 1em;
+        @include box-shadow;
+      }
       .common-button {
         flex-grow: 2;
         margin-right: 50px;
@@ -75,5 +98,10 @@
   .newarrivals {
     background-color: transparent;
     margin-top: 2em;
+  }
+  .wrapper > .row {
+    @include md {
+      flex-direction: column-reverse;
+    }
   }
 }

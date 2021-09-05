@@ -1,19 +1,36 @@
 footer {
+  @include sm {
+    margin-bottom: 1.5em;
+  }
   .brand .nav-link {
     margin-bottom: 1em;
   }
   ul {
     @include ul;
     list-style: none;
+    @include sm {
+      padding-left: 1.3em;
+    }
   }
   .link {
     padding: 0.4em 0;
     display: inline-block;
   }
+  .link,
+  p {
+    @include sm {
+      font-size: 0.9em;
+    }
+  }
   .social {
     font-size: 1.3em;
     a {
       margin-right: 1em;
+    }
+  }
+  .first--row {
+    @include sm {
+      min-width: 300px;
     }
   }
 }

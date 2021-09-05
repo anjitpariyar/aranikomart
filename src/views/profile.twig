@@ -3,7 +3,7 @@
      <main class="main profile--page">
           <section class="wrapper commonpadding ">
                <div class="row">
-                    <aside class="aside--left col-md-3">
+                    <aside class="aside--left col-lg-3">
                          <div class="sticky">
                               <ul class="nav flex-column">
                                    <li class="nav-item">
@@ -13,10 +13,10 @@
                                         <a class="nav-link"   href="#noti" data-bs-toggle="tab" data-bs-target="#noti"><i class="bi bi-bell"></i> <span>My Notifications</span></a>
                                    </li>
                                    <li class="nav-item">
-                                        <a class="nav-link" href="./tab--order" data-bs-toggle="tab" data-bs-target="#tab--order"><i class="bi bi-x-diamond"></i><span>My Orders</span> </a>
+                                        <a class="nav-link" href="#tab--order" data-bs-toggle="tab" data-bs-target="#tab--order"><i class="bi bi-x-diamond"></i><span>My Orders</span> </a>
                                    </li>
                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#tab--password"><i class="bi bi-key"></i><span> Change Password</span></a>
+                                        <a class="nav-link" href="#tab--password" data-bs-toggle="tab" data-bs-target="#tab--password"><i class="bi bi-key"></i><span> Change Password</span></a>
                                    </li>
                                    <li class="nav-item">
                                         <a class="nav-link " href="#"> <i class="bi bi-person-x"></i><span>Logout</span> </a>
@@ -25,11 +25,11 @@
                          </div>
                          
                     </aside>
-                    <aside class="aside--right col-md-9">
+                    <aside class="aside--right col-lg-9">
                          <div class="tab-content" id="myTabContent">
                               <div class="tab-pane fade show active" id="general">
                                    <form class="form">
-                                        
+                                        <h2 class="title--md">General Information</h2>
                                         <div class="row">
                                              <div class="form-group col-sm-6">
                                                   <label for="firstName">First Name</label>
@@ -68,6 +68,8 @@
                                    </form>
                               </div> 
                               <div class="tab-pane fade tab--order" id="tab--order">
+                                        <h2 class="title--md">My Order</h2>
+
                                    <div class="d-flex justify-content-between">
                                         <h2 class="title--md">Total order: 7</h2>
                                         <h2 class="title--md">Completed order: 6</h2>
@@ -141,6 +143,8 @@
                                    </div>
                               </div>
                               <div class="tab-pane fade notification" id="noti">
+                                        <h2 class="title--md">Notifications</h2>
+
                                    <div class="alert alert-light" role="alert">
                                         A simple light alert—check it out!. <a href="http://" class="link"> Click Here</a>
                                    </div>
@@ -159,7 +163,7 @@
                               </div>
                               <div class="tab-pane fade " id="tab--password">
                                    <form class="form">
-                                        
+                                        <h2 class="title--md">Change Password</h2>
                                         <div class="wrapper--small">
                                              <div class="form-group">
                                                   <label for="currentPass">Current Password</label>

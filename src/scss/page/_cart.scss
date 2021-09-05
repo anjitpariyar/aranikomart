@@ -2,16 +2,30 @@
   @include nav-tabs;
   .nav {
     margin-bottom: 2em;
+    @include md {
+      @include scrollbar;
+      white-space: nowrap;
+    }
   }
   .cart--card {
     @include card;
+
     .card {
       flex-direction: row;
+      @include sm {
+        overflow-x: scroll;
+      }
       .card__img {
         height: 100px;
         width: 130px;
+        min-width: 130px;
         border-radius: 9px;
         overflow: hidden;
+        @include sm {
+          height: 60px;
+          width: 80px;
+          min-width: 80px;
+        }
         .tag {
           top: 0.5em;
           right: 0.5em;
@@ -23,15 +37,33 @@
         flex-grow: 2;
         justify-content: space-around;
         align-items: center;
+        .para {
+          @include sm {
+            opacity: 0.5;
+            font-size: 13px;
+          }
+        }
+        .price {
+          white-space: nowrap;
+        }
         .add-cart {
           margin: 0;
         }
         & > div {
           padding: 0 2em;
+          @include xl {
+            padding: 0 12px;
+          }
         }
         .first--group {
           min-width: 400px;
           width: 30%;
+          @include md {
+            min-width: 280px;
+          }
+          @include sm {
+            min-width: 200px;
+          }
         }
       }
     }
@@ -54,6 +86,18 @@
 .checkout--page {
   .button--group {
     margin: 2em 0;
+    @include sm {
+      margin: 0;
+      position: fixed;
+      width: 100%;
+      padding: 1em;
+      left: 0;
+      bottom: 0px;
+      background-color: #fff;
+      z-index: 9;
+      @include box-shadow;
+      border-radius: 6px 6px 0 0;
+    }
     .nav {
       margin-bottom: 2em;
     }
@@ -65,6 +109,9 @@
     }
   }
   form {
+    @include sm {
+      margin-bottom: 5em;
+    }
     label {
       margin-bottom: 1em;
     }
@@ -86,6 +133,12 @@
       left: 1.7em;
       height: 20px;
       width: 20px;
+    }
+  }
+
+  & + footer {
+    @include sm {
+      display: none;
     }
   }
 }
