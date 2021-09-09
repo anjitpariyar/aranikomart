@@ -148,6 +148,17 @@ document.addEventListener("DOMContentLoaded", () => {
   $("nav.primary-nav .backdrop").click(function (e) {
     $("nav.primary-nav").removeClass("active");
   });
+  $("#search--input").on("keyup", function (e) {
+    if ($(this).val()) {
+      $(this).next().removeClass("hide");
+    } else {
+      $(this).next().addClass("hide");
+    }
+  });
+  $("#search--input").on("blur", function (e) {
+    $(this).next().addClass("hide");
+  });
+
   if (window.innerWidth < 800) {
     $(".category-page .title--md.title").click(function (e) {
       $(this).parent().find(".hide--mob").toggle("slow");

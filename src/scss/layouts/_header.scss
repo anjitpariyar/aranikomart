@@ -60,6 +60,24 @@ header {
         }
       }
     }
+    @include ul;
+    .search--drop {
+      background-color: var(--white);
+      @include box-shadow;
+      border-radius: 0 0 6px 6px;
+      padding: 0.6em 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1000;
+      .link {
+        padding: 0.3em 2em;
+        display: block;
+        &:hover {
+          background-color: var(--white--grey);
+          color: var(--primary);
+        }
+      }
+    }
   }
   .hamburger {
     display: none;

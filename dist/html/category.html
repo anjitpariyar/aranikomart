@@ -55,14 +55,16 @@
             type="search"
             list="search-list"
             placeholder="Search"
+            id="search--input"
             />
-            <datalist id="search-list">
-              <option value="Search 1"></option>
-              <option value="Search 2"></option>
-              <option value="Search 3"></option>
-              <option value="Search 4"></option>
-              <option value="Search 5"></option>
-            </datalist>
+            <ul class="search--drop hide">
+                <li><a href="/html/category?val=search1" class="link">Search list 1</a></li>
+                <li><a href="/html/category?val=search1" class="link">Search list 2</a></li>
+                <li><a href="/html/category?val=search1" class="link">Search list 3</a></li>
+                <li><a href="/html/category?val=search1" class="link">Search list 4</a></li>
+                <li><a href="/html/category?val=search1" class="link">Search list 5</a></li>
+
+            </ul>
           </div>
         </li>
         <div class="mb--nav">
@@ -907,6 +909,36 @@ id=""
           <li><a class="link">FAQ</a></li>
           <li><a class="link">Terms of use</a></li>
           <li><a class="link">Privacy Policy</a></li>
+          <li>
+            <button type="button" class="btn btn-primary" id="liveToastBtn">
+              Show live toast
+            </button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div
+                id="liveToast"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="toast-header">
+                  <img src="..." class="rounded me-2" alt="..." />
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small>11 mins ago</small>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
