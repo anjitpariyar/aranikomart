@@ -243,7 +243,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   $("#search--input").on("blur", function (e) {
-    $(this).next().addClass("hide");
+    var _this = this;
+
+    setTimeout(function () {
+      $(_this).next().addClass("hide");
+    }, 300);
   });
 
   if (window.innerWidth < 800) {

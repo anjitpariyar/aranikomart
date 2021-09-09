@@ -156,7 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   $("#search--input").on("blur", function (e) {
-    $(this).next().addClass("hide");
+    setTimeout(() => {
+      $(this).next().addClass("hide");
+    }, 300);
   });
 
   if (window.innerWidth < 800) {
