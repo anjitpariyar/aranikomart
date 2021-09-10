@@ -44,7 +44,7 @@ $xxl: 1400px;
   }
 }
 @mixin customMin($width) {
-  @media screen and (max-width: ($width)) {
+  @media screen and (min-width: ($width)) {
     @content;
   }
 }

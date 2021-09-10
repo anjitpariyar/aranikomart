@@ -1,0 +1,28 @@
+.contact {
+  .row {
+    border: 1px solid var(--bs-gray-200);
+    padding: 4em 1em;
+    @include border-radius;
+    @include sm {
+      padding: 1em;
+    }
+  }
+  .card {
+    @include sm {
+      margin: 1em 0;
+    }
+    i {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      @include sm {
+        font-size: 1em;
+      }
+    }
+    .title--small {
+      margin-bottom: 1.4em;
+      @include sm {
+        margin-bottom: 0.4em;
+      }
+    }
+  }
+}

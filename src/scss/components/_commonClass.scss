@@ -464,3 +464,12 @@ sup {
     }
   }
 }
+
+.image--fluid {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.bg--grey {
+  background-color: var(--white--grey);
+}

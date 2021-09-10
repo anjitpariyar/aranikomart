@@ -104,11 +104,13 @@ nav.primary-nav {
   .dropdown.nav-item {
     &:hover {
       & > .dropdown-menu {
-        position: absolute;
-        inset: 0px auto auto 0px;
-        margin: 0px;
-        transform: translate3d(0px, 58px, 0px);
-        display: block !important;
+        @include customMin(800px) {
+          position: absolute;
+          inset: 0px auto auto 0px;
+          margin: 0px;
+          transform: translate3d(0px, 54px, 0px);
+          display: block !important;
+        }
       }
     }
   }
