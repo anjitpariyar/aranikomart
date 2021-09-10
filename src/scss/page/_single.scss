@@ -104,4 +104,25 @@
       flex-direction: column-reverse;
     }
   }
+  .select {
+    .form-group {
+      width: auto;
+    }
+    input {
+      height: 0;
+      width: 0;
+      opacity: 0;
+      &:checked {
+        & + .form-check-label {
+          border-color: var(--black);
+        }
+      }
+    }
+    .form-check-label {
+      height: 30px;
+      width: 50px;
+      border: 3px solid transparent;
+      @include border-radius;
+    }
+  }
 }
