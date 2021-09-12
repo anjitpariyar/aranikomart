@@ -87,6 +87,8 @@
         &.active {
           p.para {
             -webkit-line-clamp: none;
+            -webkit-line-clamp: initial;
+
           }
         }
       }

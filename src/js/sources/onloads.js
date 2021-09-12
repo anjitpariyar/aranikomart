@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabEl.addEventListener("shown.bs.tab", function (event) {
       event.target; // newly activated tab
-      console.log("hi"); // previous active tab
       document.querySelector(".indicator .w-50").classList.add("w-75");
     });
     tabEl2.addEventListener("shown.bs.tab", function (event) {
       event.target; // newly activated tab
-      console.log("hi"); // previous active tab
       document.querySelector(".indicator .w-50").classList.remove("w-75");
     });
   }
@@ -63,8 +61,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toastTrigger) {
     toastTrigger.addEventListener("click", function () {
       var toast = new bootstrap.Toast(toastLiveExample);
-
       toast.show();
     });
+  }
+  //profile page
+  if(document.querySelector('main').classList.contains('profile--page')){
+    let hash = window.location.hash;
+    var someTabTriggerEl = document.querySelector(".nav-link[href='"+hash+"']");
+    console.log(someTabTriggerEl)
+      var tab = new bootstrap.Tab(someTabTriggerEl)
+      tab.show();
+  
+
+    
   }
 });
