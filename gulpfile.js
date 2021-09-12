@@ -101,7 +101,9 @@ gulp.task("copy-images", function () {
 // Image system copy
 gulp.task("copy-js", function () {
   return gulp
-    .src(["node_modules/bootstrap/dist/js/*"])
+    .src([
+      "node_modules/bootstrap/dist/js/*"
+    ])
     .pipe(gulp.dest("dist/bootstrap"));
 });
 
@@ -115,7 +117,9 @@ gulp.task("copy-fonts", function () {
 
 //copying slick carousel
 gulp.task("copy-slick", function () {
-  return gulp.src("src/slick/slick/*.*").pipe(gulp.dest("dist/slick"));
+  return gulp
+    .src(["src/slick/slick/*.*"])
+    .pipe(gulp.dest("dist/slick"));
 });
 
 // Local build
