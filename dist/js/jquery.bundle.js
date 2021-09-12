@@ -249,10 +249,6 @@ document.addEventListener("DOMContentLoaded", function () {
       $(_this).next().addClass("hide");
     }, 300);
   });
-  lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true
-  });
 
   if (window.innerWidth < 800) {
     $(".category-page .title--md.title").click(function (e) {

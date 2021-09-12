@@ -64,6 +64,15 @@
           @include sm {
             min-width: 200px;
           }
+          p{
+            margin-bottom:0;
+          }
+        }
+        .color{
+          width:30px;
+          height:14px;
+          display:inline-block;
+          border-radius:5px;
         }
       }
     }
